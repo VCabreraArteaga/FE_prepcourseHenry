@@ -9,6 +9,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+   return array [array.length - 1]
 }
 
 function obtenerLargoDelArray(array) {
@@ -32,13 +33,24 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+
+   array.push(elemento)
+   return array
 }
+
+console.log(agregarItemAlFinalDelArray([1,2,3], 9))
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.unshift(elemento)
+   return array
 }
+
+console.log(agregarItemAlComienzoDelArray([8,9,3],10))
+
+
 
 function dePalabrasAFrase(palabras) {
    // El argumento "palabras" es un arreglo de strings.
@@ -46,24 +58,39 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
+   return palabras.join(' ')
 }
+
+console.log(dePalabrasAFrase(['Hola','es','un','gusto','saludarte.']));
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+return array.includes(elemento);
 }
+
+console.log(arrayContiene(['mercancia','carga','documentación'], 'carga'))
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+
+   var acumulador = 0;
+   for (let index = 0; index < arrayOfNums.length; index++) {
+     acumulador = acumulador + arrayOfNums[index]
+   }
+   return acumulador 
 }
+
+console.log(agregarNumeros([1,2,4]))
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   
 }
 
 function numeroMasGrande(arrayOfNums) {
